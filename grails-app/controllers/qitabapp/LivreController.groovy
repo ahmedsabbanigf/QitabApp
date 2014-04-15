@@ -15,6 +15,36 @@ class LivreController {
         [livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
     }
 
+	def rechercheLivre(){
+		println params
+		println params.myGroup
+		
+		if(params.myGroup.equals("2")){
+			redirect(action: "rechercheParAuteur", params: params)
+		}
+		if(params.myGroup.equals("1")){
+			
+			redirect(action: "rechercheParTitre", params: params)
+		}
+		
+		//render(Livre.findAllByTitre("le rouge et le noir"))
+		}
+	
+	def rechercheParAuteur(){
+		println params.titre
+		def myList=Livre.findAllByAuteurs(params.titre)
+		println  myList
+		[livreList: myList]
+	}
+	
+	def rechercheParTitre(){
+		
+		def myList=Livre.findAllByTitre(params.titre)
+		
+		// place dans une Map cette liste avec la cle livreList
+		[livreList: myList]
+	}
+
     def create() {
         [livreInstance: new Livre(params)]
     }
