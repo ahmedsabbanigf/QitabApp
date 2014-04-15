@@ -15,7 +15,7 @@
 		<g:message code="livre.nombreExemplaires.label" default="Nombre Exemplaires" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="nombreExemplaires" type="number" value="${livreInstance.nombreExemplaires}" required=""/>
+	<g:textField name="nombreExemplaires" required="" value="${livreInstance?.nombreExemplaires}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'nbrDisponibles', 'error')} required">
@@ -23,7 +23,7 @@
 		<g:message code="livre.nbrDisponibles.label" default="Nbr Disponibles" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="nbrDisponibles" type="number" value="${livreInstance.nbrDisponibles}" required=""/>
+	<g:textField name="nbrDisponibles" required="" value="${livreInstance?.nbrDisponibles}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'auteurs', 'error')} ">

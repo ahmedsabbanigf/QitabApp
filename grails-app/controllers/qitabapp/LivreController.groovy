@@ -9,9 +9,42 @@ class LivreController {
     def index() {
         redirect(action: "list", params: params)
     }
+	
+	def rechercheLivre(){
+		println params
+		println params.myGroup
+		
+		if(params.myGroup.equals("2")){
+			redirect(action: "rechercheParAuteur", params: params)
+		}
+		if(params.myGroup.equals("1")){
+			
+			redirect(action: "rechercheParTitre", params: params)
+		}
+		
+		//render(Livre.findAllByTitre("le rouge et le noir"))
+		}
+	
+	def rechercheParAuteur(){
+		println params.titre
+		def myList=Livre.findAllByAuteurs(params.titre)
+		println  myList
+		[livreList: myList]
+	}
+	
+	def rechercheParTitre(){
+		
+		def myList=Livre.findAllByTitre(params.titre)
+		
+		// place dans une Map cette liste avec la cle livreList
+		[livreList: myList]
+	}
+	
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+		
+		// mettre livreInstanceList dans le map ainsi que livreInstanceTotal pour les réccupérer aprés dans la vue
         [livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
     }
 

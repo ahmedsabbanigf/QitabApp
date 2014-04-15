@@ -1,0 +1,15 @@
+Testsuite: qitabapp.LivreTests
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 1,763 sec
+------------- Standard Output ---------------
+--Output from testSomething--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testSomething--
+------------- ---------------- ---------------
+
+Testcase: testSomething took 1,142 sec
+	FAILED
+junit.framework.AssertionFailedError: Implement me
+junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at qitabapp.LivreTests.testSomething(LivreTests.groovy:15)
+

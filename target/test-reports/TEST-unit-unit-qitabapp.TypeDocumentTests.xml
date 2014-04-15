@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" name="qitabapp.TypeDocumentTests" tests="1" time="0.061" timestamp="2014-04-15T09:46:38">
+  <properties />
+  <testcase classname="qitabapp.TypeDocumentTests" name="testSomething" time="0.059">
+    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at qitabapp.TypeDocumentTests.testSomething(TypeDocumentTests.groovy:15)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

@@ -8,7 +8,10 @@ class Livre {
 	TypeDocument type
 	
 	static hasMany = [reservations : Reservation, auteurs : Auteur]
-	static belongsTo = Auteur
+
+	def String toString() {
+		titre
+	}
 	
 	static constraints = {
 		titre(blank:false)

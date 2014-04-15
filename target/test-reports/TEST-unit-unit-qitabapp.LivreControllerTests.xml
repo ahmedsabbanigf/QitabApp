@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" name="qitabapp.LivreControllerTests" tests="8" time="2.093" timestamp="2014-04-15T09:46:34">
+  <properties />
+  <testcase classname="qitabapp.LivreControllerTests" name="testEdit" time="0.583">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@551528 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@551528 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testEdit(LivreControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testShow" time="0.144">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@d72b45 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@d72b45 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:62)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testList" time="0.121" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testSave" time="0.135">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/livre/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c
+
+	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testDelete" time="0.125">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@e50599 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e50599 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testDelete(LivreControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testIndex" time="0.083" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testUpdate" time="0.102">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@e0786c (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e0786c (toString() == null)
+
+	at qitabapp.LivreControllerTests.testUpdate(LivreControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testCreate" time="0.09" />
+  <system-out><![CDATA[--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+]]></system-out>
+  <system-err><![CDATA[--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+]]></system-err>
+</testsuite>

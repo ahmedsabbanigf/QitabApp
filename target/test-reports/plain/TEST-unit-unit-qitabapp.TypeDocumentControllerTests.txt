@@ -1,0 +1,116 @@
+Testsuite: qitabapp.TypeDocumentControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0,968 sec
+------------- Standard Output ---------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+
+Testcase: testEdit took 0,34 sec
+	FAILED
+Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@19bf6df (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@19bf6df (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testEdit(TypeDocumentControllerTests.groovy:80)
+
+Testcase: testShow took 0,093 sec
+	FAILED
+Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@1f7e042 (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@1f7e042 (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testShow(TypeDocumentControllerTests.groovy:62)
+
+Testcase: testList took 0,091 sec
+Testcase: testSave took 0,075 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/typeDocument/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/typeDocument/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4
+
+	at qitabapp.TypeDocumentControllerTests.testSave(TypeDocumentControllerTests.groovy:48)
+
+Testcase: testDelete took 0,069 sec
+	FAILED
+Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@ffc9ca (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@ffc9ca (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testDelete(TypeDocumentControllerTests.groovy:144)
+
+Testcase: testIndex took 0,051 sec
+Testcase: testUpdate took 0,067 sec
+	FAILED
+Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@b07515 (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@b07515 (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:100)
+
+Testcase: testCreate took 0,08 sec

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" name="qitabapp.TypeDocumentControllerTests" tests="8" time="0.968" timestamp="2014-04-15T09:46:37">
+  <properties />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testEdit" time="0.34">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@19bf6df (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@19bf6df (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testEdit(TypeDocumentControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testShow" time="0.097">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@1f7e042 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@1f7e042 (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testShow(TypeDocumentControllerTests.groovy:62)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testList" time="0.091" />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testSave" time="0.075">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4
+
+	at qitabapp.TypeDocumentControllerTests.testSave(TypeDocumentControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testDelete" time="0.069">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@ffc9ca (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@ffc9ca (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testDelete(TypeDocumentControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testIndex" time="0.051" />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testUpdate" time="0.067">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@b07515 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@b07515 (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testCreate" time="0.08" />
+  <system-out><![CDATA[--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+]]></system-out>
+  <system-err><![CDATA[--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+]]></system-err>
+</testsuite>

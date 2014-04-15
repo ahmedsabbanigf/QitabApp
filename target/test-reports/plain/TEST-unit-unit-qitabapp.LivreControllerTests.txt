@@ -1,0 +1,116 @@
+Testsuite: qitabapp.LivreControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 2,093 sec
+------------- Standard Output ---------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+
+Testcase: testEdit took 0,582 sec
+	FAILED
+Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@551528 (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@551528 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testEdit(LivreControllerTests.groovy:80)
+
+Testcase: testShow took 0,144 sec
+	FAILED
+Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@d72b45 (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@d72b45 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:62)
+
+Testcase: testList took 0,121 sec
+Testcase: testSave took 0,135 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/livre/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/livre/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c
+
+	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:48)
+
+Testcase: testDelete took 0,125 sec
+	FAILED
+Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e50599 (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e50599 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testDelete(LivreControllerTests.groovy:144)
+
+Testcase: testIndex took 0,083 sec
+Testcase: testUpdate took 0,102 sec
+	FAILED
+Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e0786c (toString() == null)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@e0786c (toString() == null)
+
+	at qitabapp.LivreControllerTests.testUpdate(LivreControllerTests.groovy:100)
+
+Testcase: testCreate took 0,09 sec

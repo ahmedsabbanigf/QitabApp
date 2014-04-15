@@ -1,0 +1,61 @@
+Testsuite: qitabapp.ReservationControllerTests
+Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 1,223 sec
+------------- Standard Output ---------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testEdit--
+--Output from testShow--
+--Output from testList--
+--Output from testSave--
+--Output from testDelete--
+--Output from testIndex--
+--Output from testUpdate--
+--Output from testCreate--
+------------- ---------------- ---------------
+
+Testcase: testEdit took 0,349 sec
+Testcase: testShow took 0,104 sec
+Testcase: testList took 0,106 sec
+Testcase: testSave took 0,155 sec
+	FAILED
+Assertion failed: 
+
+assert model.reservationInstance != null
+       |     |                   |
+       [:]   null                false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert model.reservationInstance != null
+       |     |                   |
+       [:]   null                false
+
+	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:40)
+
+Testcase: testDelete took 0,101 sec
+Testcase: testIndex took 0,093 sec
+Testcase: testUpdate took 0,119 sec
+	FAILED
+Assertion failed: 
+
+assert view == "/reservation/edit"
+       |    |
+       null false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert view == "/reservation/edit"
+       |    |
+       null false
+
+	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:108)
+
+Testcase: testCreate took 0,086 sec
