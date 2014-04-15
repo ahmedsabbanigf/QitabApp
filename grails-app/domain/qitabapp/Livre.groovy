@@ -3,8 +3,8 @@ package qitabapp
 class Livre {
 
 	String titre
-	String nombreExemplaires
-	String nbrDisponibles
+	int nombreExemplaires
+	int nbrDisponibles
 	TypeDocument type
 	
 	static hasMany = [reservations : Reservation, auteurs : Auteur]

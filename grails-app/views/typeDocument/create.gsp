@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'scaffold.css')}"/>
 		<g:set var="entityName" value="${message(code: 'typeDocument.label', default: 'TypeDocument')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>

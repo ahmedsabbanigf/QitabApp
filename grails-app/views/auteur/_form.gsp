@@ -23,6 +23,6 @@
 		<g:message code="auteur.livres.label" default="Livres" />
 		
 	</label>
-	<g:select name="livres" from="${qitabapp.Livre.list()}" multiple="multiple" optionKey="id" size="5" value="${auteurInstance?.livres*.id}" class="many-to-many"/>
+	
 </div>
 

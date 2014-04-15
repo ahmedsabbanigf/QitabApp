@@ -15,7 +15,7 @@
 		<g:message code="livre.nombreExemplaires.label" default="Nombre Exemplaires" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nombreExemplaires" required="" value="${livreInstance?.nombreExemplaires}"/>
+	<g:field name="nombreExemplaires" type="number" value="${livreInstance.nombreExemplaires}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'nbrDisponibles', 'error')} required">
@@ -23,7 +23,7 @@
 		<g:message code="livre.nbrDisponibles.label" default="Nbr Disponibles" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nbrDisponibles" required="" value="${livreInstance?.nbrDisponibles}"/>
+	<g:field name="nbrDisponibles" type="number" value="${livreInstance.nbrDisponibles}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'auteurs', 'error')} ">
@@ -31,7 +31,7 @@
 		<g:message code="livre.auteurs.label" default="Auteurs" />
 		
 	</label>
-	
+	<g:select name="auteurs" from="${qitabapp.Auteur.list()}" multiple="multiple" optionKey="id" size="5" value="${livreInstance?.auteurs*.id}" class="many-to-many"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'reservations', 'error')} ">

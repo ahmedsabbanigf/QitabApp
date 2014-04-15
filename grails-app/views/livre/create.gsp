@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'scaffold.css')}"/>
 		<g:set var="entityName" value="${message(code: 'livre.label', default: 'Livre')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
@@ -13,8 +14,7 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 			</ul>
-		</
-0>
+		</div>
 		<div id="create-livre" class="content scaffold-create" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
