@@ -22,24 +22,52 @@ class LivreController {
 		if(params.myGroup.equals("2")){
 			redirect(action: "rechercheParAuteur", params: params)
 		}
-		if(params.myGroup.equals("1")){
+		else if(params.myGroup.equals("1")){
 			
 			redirect(action: "rechercheParTitre", params: params)
 		}
+		else{
+			redirect(action: "rechercheParType", params: params)
+		}
 		
-		//render(Livre.findAllByTitre("le rouge et le noir"))
 		}
 	
+	def rechercheParType(){
+		
+		def c = Livre.createCriteria()
+		def results = c.list {
+
+				type{
+					like("intitule" , "%"+params.titre+"%")
+				}
+			}
+
+		[livreList: results]
+	}
+	
 	def rechercheParAuteur(){
-		println params.titre
-		def myList=Livre.findAllByAuteurs(params.titre)
-		println  myList
-		[livreList: myList]
+		println "je suis laaaaa a daaak cheb"
+		
+	def c = Livre.createCriteria()
+		def result = c.list {
+
+				auteurs{
+					like("prenom" , "%"+params.titre+"%")
+					
+						}
+				
+				
+			}
+			
+		println  result
+		[livreList: result]
 	}
 	
 	def rechercheParTitre(){
 		
-		def myList=Livre.findAllByTitre(params.titre)
+		def myList=Livre.findAllByTitreLike("%"+params.titre+"%")
+		
+		println myList
 		
 		// place dans une Map cette liste avec la cle livreList
 		[livreList: myList]
