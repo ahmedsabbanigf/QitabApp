@@ -38,9 +38,7 @@
 					
 						<g:sortableColumn property="titre" title="${message(code: 'livre.titre.label', default: 'Titre')}" />
 					
-						<g:sortableColumn property="nombreExemplaires" title="${message(code: 'livre.nombreExemplaires.label', default: 'Nombre Exemplaires')}" />
-					
-						<g:sortableColumn property="nbrDisponibles" title="${message(code: 'livre.nbrDisponibles.label', default: 'Nbr Disponibles')}" />
+						<g:sortableColumn property="nombreExemplaires" title="${message(code: 'livre.auteurs.label', default: 'Auteur')}" />
 					
 						<th><g:message code="livre.type.label" default="Type" /></th>
 						<th class="sorting">Action</th>
@@ -55,10 +53,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
-					
-						<td>${fieldValue(bean: livreInstance, field: "nombreExemplaires")}</td>
-					
-						<td>${fieldValue(bean: livreInstance, field: "nbrDisponibles")}</td>
+															
+						 <td>${livreInstance.auteurs?.nom+" "+livreInstance.auteurs?.prenom}</td> 
 					
 						<td>${fieldValue(bean: livreInstance, field: "type")}</td>
 					
@@ -79,6 +75,12 @@
 			</tbody>
 		</table>
 		</div>
+		<div class="center ">
+		<a class="btn btn-success" href="/QitabApp/reservation/validerPanier}">
+										<i class="icon-zoom-in icon-white"></i>  
+										Valider panier                                           
+									</a>
+									</div>
 	</div>
 	</div>
 	</div>

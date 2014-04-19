@@ -8,7 +8,7 @@ class Auteur {
 	static belongsTo = Livre
 	
 	def String toString() {
-		nom
+		prenom
 	}
 	
 	 static constraints = {

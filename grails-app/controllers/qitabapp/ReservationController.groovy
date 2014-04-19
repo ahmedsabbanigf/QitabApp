@@ -9,6 +9,10 @@ class ReservationController {
     def index() {
         redirect(action: "list", params: params)
     }
+	
+	def validerPanier(){
+		
+	}
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
