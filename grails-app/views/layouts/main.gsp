@@ -35,7 +35,7 @@
 	
 
 	
-	<link rel="shortcut icon" href="/biblio/cms/img/favicon.ico">
+	<link rel="shortcut icon" href="${resource(dir: 'cms/img', file: 'favicon.ico')}">
 		
 </head>
 
@@ -59,15 +59,15 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Voir mon panier</a></li>
+						<li><a href="/QitabApp/livre/showpanier">Voir mon panier</a></li>
 						<li class="divider"></li>
-						<li><a href="/biblio/Users/logout">Vider mon panier</a></li>
+						<li><a href="/QitabApp/livre/viderpanier" onclick="return confirm('Le panier va se vider entièrement, Vous êtes sûr ??');">Vider mon panier</a></li>
 					</ul>
 				</div>
 	
 
 						
-		<form action="/biblio/ouvrages/rechercher" id="ModuleAddForm" method="post" accept-charset="utf-8" class="navbar-search pull-left">
+		<form action="/QitabApp/livre/rechercheLivre" id="ModuleAddForm" method="post" accept-charset="utf-8" class="navbar-search pull-left">
 		<input placeholder="Search" class="search-query span2" name="query" type="text">
 		</form>
 						</li>
@@ -85,27 +85,26 @@
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">Ouvrages</li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/add"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter Ouvrage</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste Ouvrages</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter Ouvrage</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste Ouvrages</span></a></li>
 						
-						<li class="nav-header hidden-tablet">Types</li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/1"><i class="icon-list-alt"></i><span class="hidden-tablet"> Livre</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/2"><i class="icon-list-alt"></i><span class="hidden-tablet">Dictionnaire</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/3"><i class="icon-list-alt"></i><span class="hidden-tablet">Encyclopédie</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/4"><i class="icon-list-alt"></i><span class="hidden-tablet">Tazi Saoud</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/5"><i class="icon-list-alt"></i><span class="hidden-tablet">Revues</span></a></li>
-						<li><a class="ajax-link" href="/biblio/Ouvrages/indexType/6"><i class="icon-list-alt"></i><span class="hidden-tablet">2ème étage</span></a></li>
+						<li class="nav-header hidden-tablet">Panier</li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet"> Livre</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Dictionnaire</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Encyclopédie</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Tazi Saoud</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Revues</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">2ème étage</span></a></li>
 
 						<li class="nav-header hidden-tablet">Thèses</li>
-						<li><a class="ajax-link" href="/biblio/memories/add"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter thèse</span></a></li>
-						<li><a class="ajax-link" href="/biblio/memories"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste thèses</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter thèse</span></a></li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste thèses</span></a></li>
 				<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox" checked> Pour plus de rapidité</label>		
 
 					</ul>
 					
 				</div>
 			</div>
-			
 			
 			<noscript>
 				<div class="alert alert-block span10">
@@ -196,10 +195,9 @@
 	<script src="/QitabApp/static/cms/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="/QitabApp/static/cms/js/charisma.js"></script>
-	
 </body>
 <footer>
-		<p class="pull-left">&copy; <a href="" target="_blank">Projet JEE</a> UPS</p>
+		<p class="pull-left">&copy; <a href="#" target="_blank">Projet JEE</a> UPS</p>
 		<p class="pull-right">Programmé par : <a href="#">Oussama LAKLALECH & Ahmed SABBANI</a></p><br/>
 </footer>
 </html>

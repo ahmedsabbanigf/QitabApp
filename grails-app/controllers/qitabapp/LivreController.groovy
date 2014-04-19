@@ -1,12 +1,16 @@
 package qitabapp
 
+import javax.servlet.http.HttpSession
 import org.springframework.dao.DataIntegrityViolationException
 
 class LivreController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+	static ArrayList<Integer> listPanier = new ArrayList<Integer>()
+	
     def index() {
+		println "entree index"
+		HttpSession session=request.getSession();
         redirect(action: "list", params: params)
     }
 
@@ -14,6 +18,12 @@ class LivreController {
         params.max = Math.min(max ?: 10, 100)
         [livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
     }
+	
+	def showpanier() {
+		//println session.panier
+		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier") 
+		[livreInstanceList: Livre.getAll(listLivresAjouteAuPanier), livreInstanceTotal: Livre.count()]
+	}
 
 	def rechercheLivre(){
 		println params
@@ -46,8 +56,6 @@ class LivreController {
 	}
 	
 	def rechercheParAuteur(){
-		println "je suis laaaaa a daaak cheb"
-		
 	def c = Livre.createCriteria()
 		def result = c.list {
 
@@ -55,8 +63,6 @@ class LivreController {
 					like("prenom" , "%"+params.titre+"%")
 					
 						}
-				
-				
 			}
 			
 		println  result
@@ -158,4 +164,48 @@ class LivreController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def ajoutpanier(Long id) {
+		def livreInstance = Livre.get(id)
+		if (!livreInstance) {
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'livre.label', default: 'Livre'), id])
+			redirect(action: "list")
+			return
+		}
+		
+		
+		if(livreInstance.nbrDisponibles >= 1){
+			livreInstance.nbrDisponibles = livreInstance.nbrDisponibles-1 
+			if (!livreInstance.save(flush: true)) {
+				render(view: "list", model: [livreInstance: livreInstance])
+				return
+			}
+			
+			listPanier.add(livreInstance.id)
+			session["panier"] = listPanier
+			println session.panier
+			
+			
+			flash.message = message(code: 'Livre ajouté au panier avec succés', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
+			redirect(action: "list")
+		}else {
+		flash.message = message(code: 'Le livre est indisponible', args: [message(code: 'livre.label', default: 'Livre'), id])
+		redirect(action: "list")
+		}
+
+	}
+	
+	def viderpanier() {
+		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier")
+		def livreInstanceList = Livre.getAll(listLivresAjouteAuPanier)
+		println "livre au panier : "+livreInstanceList
+		livreInstanceList.each {
+			it.nbrDisponibles = it.nbrDisponibles + 1;
+			it.save(flush:true)
+		}
+		listLivresAjouteAuPanier.clear();
+		session.setAttribute("panier", listLivresAjouteAuPanier)
+		flash.message = message(code: 'Le panier est désormais vide', args: [message(code: 'livre.label', default: 'Livre')])
+		redirect(action: "list")
+	}
 }
