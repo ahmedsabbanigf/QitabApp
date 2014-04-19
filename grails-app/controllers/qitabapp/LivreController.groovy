@@ -74,6 +74,7 @@ class LivreController {
 	}
 
     def create() {
+		println params
         [livreInstance: new Livre(params)]
     }
 

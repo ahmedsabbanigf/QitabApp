@@ -9,5 +9,6 @@ class TypeDocument {
 	}
 	
 	 static constraints = {
-    }
+		// intitule unique: true
+	 }
 }
