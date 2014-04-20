@@ -68,8 +68,21 @@
 
 						
 		<form action="/QitabApp/livre/rechercheLivre" id="ModuleAddForm" method="post" accept-charset="utf-8" class="navbar-search pull-left">
-		<input placeholder="Search" class="search-query span2" name="query" type="text">
+		<fieldset>
+		<input placeholder="Search" class="search-query span2" name="titre" type="text">
+				
+		
+	 		par titre	 		
+	 		<g:radio name="myGroup" value="1"/>
+	 		par auteur
+			<g:radio name="myGroup" value="2" checked="true"/>
+			par type
+			<g:radio name="myGroup" value="3" />
+		
+		</fieldset>
 		</form>
+						
+
 						</li>
 					</ul>
 				</div>
