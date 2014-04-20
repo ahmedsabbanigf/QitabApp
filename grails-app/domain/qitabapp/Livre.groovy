@@ -18,4 +18,5 @@ class Livre {
 		nombreExemplaires(blank:false)
 		nbrDisponibles(blank:false)
     }
+	
 }

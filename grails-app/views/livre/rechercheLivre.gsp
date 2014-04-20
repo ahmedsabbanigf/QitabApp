@@ -18,15 +18,5 @@
 		</fieldset>
 </g:form>
 
-<g:each in="${livreList}"
-                status="i"
-                var="livreInstance">
-
-   ${livreInstance?.titre}
-   ${livreInstance?.nombreExemplaires}
-   ${livreInstance?.nbrDisponibles}
-    <br/>
-</g:each>
-
 </body>
 </html>

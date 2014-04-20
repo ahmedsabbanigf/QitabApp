@@ -15,13 +15,14 @@ class LivreController {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        //params.max = Math.min(max ?: 10, 100)
         [livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
     }
 	
 	def showpanier() {
 		//println session.panier
 		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier") 
+		println listLivresAjouteAuPanier
 		[livreInstanceList: Livre.getAll(listLivresAjouteAuPanier), livreInstanceTotal: Livre.count()]
 	}
 
@@ -186,13 +187,28 @@ class LivreController {
 			println session.panier
 			
 			
-			flash.message = message(code: 'Livre ajouté au panier avec succés', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
+			flash.message = message(code: 'Livre ajoute au panier avec succes', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
 			redirect(action: "list")
 		}else {
 		flash.message = message(code: 'Le livre est indisponible', args: [message(code: 'livre.label', default: 'Livre'), id])
 		redirect(action: "list")
 		}
 
+	}
+	
+	def supprimerLivreDuPanier(Long id){
+		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier")
+		//listPanier.addt(livreInstance.id)
+		def livreInstanceList = Livre.get(id)
+		livreInstanceList.each {
+			it.nbrDisponibles = it.nbrDisponibles + 1
+			it.save(flush:true)
+		}
+		
+		listLivresAjouteAuPanier.remove(id)
+		session.setAttribute("panier", listLivresAjouteAuPanier)
+		redirect(action: "showpanier")
+		
 	}
 	
 	def viderpanier() {
@@ -202,9 +218,10 @@ class LivreController {
 		livreInstanceList.each {
 			it.nbrDisponibles = it.nbrDisponibles + 1;
 			it.save(flush:true)
-		}
+		       }
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
+		
 		flash.message = message(code: 'Le panier est désormais vide', args: [message(code: 'livre.label', default: 'Livre')])
 		redirect(uri: request.getHeader('referer') )	
 		}

@@ -9,6 +9,41 @@ class ReservationController {
     def index() {
         redirect(action: "list", params: params)
     }
+	
+	def validerPanier(){
+		
+		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier")
+		def livreInstanceList = Livre.getAll(listLivresAjouteAuPanier)
+		
+		//génération du code
+		String codeGenere = "";
+		livreInstanceList.each {
+			codeGenere = codeGenere + it.titre.hashCode()
+		}
+		//La date limite pour récupérer le livre
+		Date dateLimite = new Date() + 1
+		
+		//Sauvegarder la résérvation
+		def reservation = new Reservation(code : codeGenere, dateReservation : dateLimite)
+		livreInstanceList.each {
+			reservation.addToLivres(it)
+		}
+		
+		if (!reservation.save(flush: true)) {
+			flash.message = message(code: 'Une erreur est survenue, veuillez réessayer')
+			redirect(action: "showpanier",controller:"livre")
+			return
+		}
+		
+		//On vide le panier
+		ArrayList<Integer> listLivresAuPanier = session.getAttribute("panier")
+		listLivresAuPanier.clear();
+		session.setAttribute("panier", listLivresAuPanier)
+		
+		flash.message = message(code: 'reservation reussie')
+		
+		[livreList: livreInstanceList, reservation : reservation]
+	}
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)

@@ -2,8 +2,8 @@ package qitabapp
 
 class Reservation {
 
-	def code
-	def dateReservation
+	String code
+	Date dateReservation
 	
 	static belongsTo = Livre
 	static hasMany = [livres:Livre]
