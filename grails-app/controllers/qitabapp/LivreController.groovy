@@ -22,6 +22,7 @@ class LivreController {
 	def showpanier() {
 		//println session.panier
 		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier") 
+		println listLivresAjouteAuPanier
 		[livreInstanceList: Livre.getAll(listLivresAjouteAuPanier), livreInstanceTotal: Livre.count()]
 	}
 

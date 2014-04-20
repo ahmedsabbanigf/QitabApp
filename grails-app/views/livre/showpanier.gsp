@@ -8,6 +8,10 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
+
+	<g:if test="${livreList}">
+   <%-- show administrative functions --%>
+<h1>  hehooooooo </h1>
 		<a href="#list-livre" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
@@ -76,7 +80,7 @@
 		</table>
 		</div>
 		<div class="center ">
-		<a class="btn btn-success" href="/QitabApp/reservation/validerPanier}">
+		<a class="btn btn-success" href="/QitabApp/reservation/validerPanier">
 										<i class="icon-zoom-in icon-white"></i>  
 										Valider panier                                           
 									</a>
@@ -84,5 +88,9 @@
 	</div>
 	</div>
 	</div>
+	</g:if>
+<g:else>
+<h1>  votre panier est vide  </h1>
+</g:else>
 </body>
 </html>

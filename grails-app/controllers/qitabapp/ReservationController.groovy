@@ -12,6 +12,10 @@ class ReservationController {
 	
 	def validerPanier(){
 		
+		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier")
+		def livreInstanceList = Livre.getAll(listLivresAjouteAuPanier)
+		session.invalidate()
+		[livreList: livreInstanceList]
 	}
 
     def list(Integer max) {
