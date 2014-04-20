@@ -19,7 +19,7 @@
 			<g:submitButton name="rechercheLivre" value="search" />
 		</fieldset>
 </g:form>
-<!-- 
+<div>
 <g:each in="${livreList}"
                 status="i"
                 var="livreInstance">
@@ -39,7 +39,14 @@
  <td> ${livreInstance?.type}</td>
   </tr>
    </table>
-</g:each>  -->
+</g:each>  
+
+<div class="pagination">
+<g:paginate next="Forward" prev="Back"
+              max="2"
+             total="${livreCount}" />
+            </div>
+            </div>
 
 <a href="#list-livre" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">

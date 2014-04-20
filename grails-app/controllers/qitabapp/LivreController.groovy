@@ -67,7 +67,7 @@ class LivreController {
 			}
 			
 		println  result
-		[livreList: result]
+		[livreList: result, livreCount:result.size()]
 	}
 	
 	def rechercheParTitre(){
@@ -222,7 +222,7 @@ class LivreController {
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
 		
-		flash.message = message(code: 'Le panier est désormais vide', args: [message(code: 'livre.label', default: 'Livre')])
+		flash.message = message(code: 'Le panier est dï¿½sormais vide', args: [message(code: 'livre.label', default: 'Livre')])
 		redirect(uri: request.getHeader('referer') )	
 		}
 }
