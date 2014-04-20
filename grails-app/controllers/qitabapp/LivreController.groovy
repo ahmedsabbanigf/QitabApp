@@ -206,6 +206,6 @@ class LivreController {
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
 		flash.message = message(code: 'Le panier est désormais vide', args: [message(code: 'livre.label', default: 'Livre')])
-		redirect(action: "list")
-	}
+		redirect(uri: request.getHeader('referer') )	
+		}
 }
