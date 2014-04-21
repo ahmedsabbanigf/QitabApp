@@ -1,415 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" id="0" name="AuteurControllerTests" package="qitabapp" tests="8" time="4.965" timestamp="2014-04-15T09:46:29">
+  <testsuite errors="0" failures="3" hostname="sabbani-Satellite-C660" id="0" name="LivreControllerTests" package="qitabapp" tests="8" time="7.024" timestamp="2014-04-21T22:43:08">
       <properties />
 
-      <testcase classname="qitabapp.AuteurControllerTests" name="testEdit" time="2.482">
-          <failure message="Assertion failed: &#xa;&#xa;assert auteur.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       qitabapp.Auteur@f124cb (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="qitabapp.LivreControllerTests" name="testIndex" time="3.634" />
 
-assert auteur.save() != null
-       |      |      |
-       |      null   false
-       qitabapp.Auteur@f124cb (toString() == null)
+      <testcase classname="qitabapp.LivreControllerTests" name="testList" time="1.158" />
 
-	at qitabapp.AuteurControllerTests.testEdit(AuteurControllerTests.groovy:80)
-</failure>
+      <testcase classname="qitabapp.LivreControllerTests" name="testRechercheLivre" time="0.291">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &quot;/livre/rechercheParAuteur&quot;&#xa;       |        |             |&#xa;       |        |             false&#xa;       |        /livre/rechercheParType&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1091c6b&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
-      </testcase>
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testShow" time="0.196">
-          <failure message="Assertion failed: &#xa;&#xa;assert auteur.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       qitabapp.Auteur@75d9e6 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert auteur.save() != null
-       |      |      |
-       |      null   false
-       qitabapp.Auteur@75d9e6 (toString() == null)
-
-	at qitabapp.AuteurControllerTests.testShow(AuteurControllerTests.groovy:62)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testList" time="1.114" />
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testSave" time="0.235">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/auteur/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@105e270&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert response.redirectedUrl == &apos;/auteur/show/1&apos;
+assert response.redirectedUrl == &quot;/livre/rechercheParAuteur&quot;
        |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@105e270
+       |        |             false
+       |        /livre/rechercheParType
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1091c6b
 
-	at qitabapp.AuteurControllerTests.testSave(AuteurControllerTests.groovy:48)
+	at qitabapp.LivreControllerTests.testRechercheLivre(LivreControllerTests.groovy:37)
 </failure>
 
       </testcase>
 
-      <testcase classname="qitabapp.AuteurControllerTests" name="testDelete" time="0.185">
-          <failure message="Assertion failed: &#xa;&#xa;assert auteur.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       qitabapp.Auteur@209fe7 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParTitre" time="0.296" />
 
-assert auteur.save() != null
-       |      |      |
-       |      null   false
-       qitabapp.Auteur@209fe7 (toString() == null)
-
-	at qitabapp.AuteurControllerTests.testDelete(AuteurControllerTests.groovy:144)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testIndex" time="0.173" />
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testUpdate" time="0.177">
-          <failure message="Assertion failed: &#xa;&#xa;assert auteur.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       qitabapp.Auteur@435561 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert auteur.save() != null
-       |      |      |
-       |      null   false
-       qitabapp.Auteur@435561 (toString() == null)
-
-	at qitabapp.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:100)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.AuteurControllerTests" name="testCreate" time="0.156" />
-
-      <system-out><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" id="1" name="AuteurTests" package="qitabapp" tests="1" time="0.138" timestamp="2014-04-15T09:46:38">
-      <properties />
-
-      <testcase classname="qitabapp.AuteurTests" name="testSomething" time="0.054">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.AuteurTests.testSomething(AuteurTests.groovy:15)
-</failure>
-
-      </testcase>
-
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" id="2" name="LivreControllerTests" package="qitabapp" tests="8" time="2.093" timestamp="2014-04-15T09:46:34">
-      <properties />
-
-      <testcase classname="qitabapp.LivreControllerTests" name="testEdit" time="0.583">
-          <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@551528 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert livre.save() != null
-       |     |      |
-       |     null   false
-       qitabapp.Livre@551528 (toString() == null)
-
-	at qitabapp.LivreControllerTests.testEdit(LivreControllerTests.groovy:80)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.LivreControllerTests" name="testShow" time="0.144">
-          <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@d72b45 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert livre.save() != null
-       |     |      |
-       |     null   false
-       qitabapp.Livre@d72b45 (toString() == null)
-
-	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:62)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.LivreControllerTests" name="testList" time="0.121" />
-
-      <testcase classname="qitabapp.LivreControllerTests" name="testSave" time="0.135">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="qitabapp.LivreControllerTests" name="testSave" time="0.431">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@38a39d&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/livre/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1ba110c
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@38a39d
 
-	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:48)
+	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:81)
 </failure>
 
       </testcase>
 
-      <testcase classname="qitabapp.LivreControllerTests" name="testDelete" time="0.125">
-          <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@e50599 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="qitabapp.LivreControllerTests" name="testShow" time="0.799">
+          <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@170aad8 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
        |     |      |
        |     null   false
-       qitabapp.Livre@e50599 (toString() == null)
+       qitabapp.Livre@170aad8 (toString() == null)
 
-	at qitabapp.LivreControllerTests.testDelete(LivreControllerTests.groovy:144)
+	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:95)
 </failure>
 
       </testcase>
 
-      <testcase classname="qitabapp.LivreControllerTests" name="testIndex" time="0.083" />
+      <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParType" time="0.172" />
 
-      <testcase classname="qitabapp.LivreControllerTests" name="testUpdate" time="0.102">
-          <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@e0786c (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParAuteur" time="0.141" />
 
-assert livre.save() != null
-       |     |      |
-       |     null   false
-       qitabapp.Livre@e0786c (toString() == null)
-
-	at qitabapp.LivreControllerTests.testUpdate(LivreControllerTests.groovy:100)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.LivreControllerTests" name="testCreate" time="0.09" />
-
-      <system-out><![CDATA[--Output from testEdit--
---Output from testShow--
+      <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
+--Output from testRechercheLivre--
+[:]
+null
+--Output from testRechercheParTitre--
+[]
 --Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
+--Output from testShow--
+--Output from testRechercheParType--
+--Output from testRechercheParAuteur--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testEdit--
---Output from testShow--
+      <system-err><![CDATA[--Output from testIndex--
 --Output from testList--
+--Output from testRechercheLivre--
+--Output from testRechercheParTitre--
 --Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" id="3" name="LivreTests" package="qitabapp" tests="1" time="1.763" timestamp="2014-04-15T09:46:27">
-      <properties />
-
-      <testcase classname="qitabapp.LivreTests" name="testSomething" time="1.145">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.LivreTests.testSomething(LivreTests.groovy:15)
-</failure>
-
-      </testcase>
-
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="2" hostname="sabbani-Satellite-C660" id="4" name="ReservationControllerTests" package="qitabapp" tests="8" time="1.223" timestamp="2014-04-15T09:46:36">
-      <properties />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testEdit" time="0.349" />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testShow" time="0.104" />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testList" time="0.106" />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testSave" time="0.156">
-          <failure message="Assertion failed: &#xa;&#xa;assert model.reservationInstance != null&#xa;       |     |                   |&#xa;       [:]   null                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert model.reservationInstance != null
-       |     |                   |
-       [:]   null                false
-
-	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:40)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testDelete" time="0.101" />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testIndex" time="0.093" />
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testUpdate" time="0.119">
-          <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/reservation/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert view == &quot;/reservation/edit&quot;
-       |    |
-       null false
-
-	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:108)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.ReservationControllerTests" name="testCreate" time="0.086" />
-
-      <system-out><![CDATA[--Output from testEdit--
 --Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" id="5" name="ReservationTests" package="qitabapp" tests="1" time="0.186" timestamp="2014-04-15T09:46:37">
-      <properties />
-
-      <testcase classname="qitabapp.ReservationTests" name="testSomething" time="0.056">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.ReservationTests.testSomething(ReservationTests.groovy:15)
-</failure>
-
-      </testcase>
-
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" id="6" name="TypeDocumentControllerTests" package="qitabapp" tests="8" time="0.968" timestamp="2014-04-15T09:46:37">
-      <properties />
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testEdit" time="0.34">
-          <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@19bf6df (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert typeDocument.save() != null
-       |            |      |
-       |            null   false
-       qitabapp.TypeDocument@19bf6df (toString() == null)
-
-	at qitabapp.TypeDocumentControllerTests.testEdit(TypeDocumentControllerTests.groovy:80)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testShow" time="0.097">
-          <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@1f7e042 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert typeDocument.save() != null
-       |            |      |
-       |            null   false
-       qitabapp.TypeDocument@1f7e042 (toString() == null)
-
-	at qitabapp.TypeDocumentControllerTests.testShow(TypeDocumentControllerTests.groovy:62)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testList" time="0.091" />
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testSave" time="0.075">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4
-
-	at qitabapp.TypeDocumentControllerTests.testSave(TypeDocumentControllerTests.groovy:48)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testDelete" time="0.069">
-          <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@ffc9ca (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert typeDocument.save() != null
-       |            |      |
-       |            null   false
-       qitabapp.TypeDocument@ffc9ca (toString() == null)
-
-	at qitabapp.TypeDocumentControllerTests.testDelete(TypeDocumentControllerTests.groovy:144)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testIndex" time="0.051" />
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testUpdate" time="0.067">
-          <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@b07515 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert typeDocument.save() != null
-       |            |      |
-       |            null   false
-       qitabapp.TypeDocument@b07515 (toString() == null)
-
-	at qitabapp.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:100)
-</failure>
-
-      </testcase>
-
-      <testcase classname="qitabapp.TypeDocumentControllerTests" name="testCreate" time="0.08" />
-
-      <system-out><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
---Output from testUpdate--
---Output from testCreate--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" id="7" name="TypeDocumentTests" package="qitabapp" tests="1" time="0.061" timestamp="2014-04-15T09:46:38">
-      <properties />
-
-      <testcase classname="qitabapp.TypeDocumentTests" name="testSomething" time="0.059">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.TypeDocumentTests.testSomething(TypeDocumentTests.groovy:15)
-</failure>
-
-      </testcase>
-
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testSomething--
+--Output from testRechercheParType--
+--Output from testRechercheParAuteur--
 ]]></system-err>
 
   </testsuite>
