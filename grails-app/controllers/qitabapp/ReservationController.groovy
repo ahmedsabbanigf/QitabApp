@@ -38,9 +38,11 @@ class ReservationController {
 		//On vide le panier
 		ArrayList<Integer> listLivresAuPanier = session.getAttribute("panier")
 		listLivresAuPanier.clear();
+		ArrayList<Integer> listLivresAuPanierTitre = session.getAttribute("titres")
+		listLivresAuPanierTitre.clear();
 		session.setAttribute("panier", listLivresAuPanier)
 		session.setAttribute("nombre", 0)
-		session.setAttribute("titres", new ArrayList<String>())
+		session.setAttribute("titres", listLivresAuPanierTitre)
 		
 		flash.message = message(code: 'reservation reussie')
 		

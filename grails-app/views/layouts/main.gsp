@@ -100,8 +100,8 @@
 						
 						<li class="nav-header hidden-tablet">Mon Panier</li>
 						<g:if test = "${session.nombre > 0}">
-						<g:each in="${session.titres}" status="i" var="livreInstance">
-						<li><a class="ajax-link"><i class="icon icon-black icon-cart"></i><span class="hidden-tablet">${livreInstance}</span></li>
+						<g:each in="${session.titres}" var="livreInstance">
+						<li><a class="ajax-link"><i class="icon-cart"></i><span class="hidden-tablet">${livreInstance}</span></a></li>
 						</g:each>
 						</g:if>
 						<g:else>
