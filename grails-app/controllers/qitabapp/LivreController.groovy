@@ -185,8 +185,8 @@ class LivreController {
 			return
 		}
 		
-		
-		if(livreInstance.nbrDisponibles >= 1){
+		println " listPanier "+ listPanier
+		if(livreInstance.nbrDisponibles >= 1 && !listPanier.contains(id)){
 			livreInstance.nbrDisponibles = livreInstance.nbrDisponibles-1 
 			if (!livreInstance.save(flush: true)) {
 				//render(view: "list", model: [livreInstance: livreInstance])
@@ -196,7 +196,22 @@ class LivreController {
 			
 			listPanier.add(livreInstance.id)
 			session["panier"] = listPanier
-			println session.panier
+			
+			
+			
+			/*if(session.find { it == id }){
+				println " fin trouvé "
+			}else{
+			println "non trouvé "
+			}
+			println  " le contenu du panier  "+ session["panier"]
+			
+			if(session["panier"].any{ it == livreInstance.id}){
+				println " je suis laaa "
+			}
+			else{
+				println " je suis pas la nonono "
+			}*/
 			
 			
 			flash.message = message(code: 'Livre ajoute au panier avec succes', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
