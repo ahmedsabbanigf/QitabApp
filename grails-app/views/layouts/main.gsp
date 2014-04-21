@@ -71,9 +71,9 @@
 				
 		
 	 		par titre	 		
-	 		<g:radio name="myGroup" value="1"/>
+	 		<g:radio name="myGroup" value="1" checked="true"/>
 	 		par auteur
-			<g:radio name="myGroup" value="2" checked="true"/>
+			<g:radio name="myGroup" value="2" />
 			par type
 			<g:radio name="myGroup" value="3" />
 		
@@ -95,22 +95,20 @@
 			<div class="span2 main-menu-span">
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="nav-header hidden-tablet">Ouvrages</li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter Ouvrage</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste Ouvrages</span></a></li>
+						<li class="nav-header hidden-tablet">Bibliothèque</li>
+						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste des livres</span></a></li>
 						
-						<li class="nav-header hidden-tablet">Panier</li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet"> Livre</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Dictionnaire</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Encyclopédie</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Tazi Saoud</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Revues</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">2ème étage</span></a></li>
+						<li class="nav-header hidden-tablet">Mon Panier</li>
+						<g:if test = "${session.nombre > 0}">
+						<g:each in="${session.titres}" status="i" var="livreInstance">
+						<li><a class="ajax-link"><i class="icon icon-black icon-cart"></i><span class="hidden-tablet">${livreInstance}</span></li>
+						</g:each>
+						</g:if>
+						<g:else>
+						<li><a class="ajax-link"><i class="icon icon-darkgray icon-cancel"></i><span class="hidden-tablet">Panier vide</span></a></li>
+						</g:else>
 
-						<li class="nav-header hidden-tablet">Thèses</li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Ajouter thèse</span></a></li>
-						<li><a class="ajax-link" href="/QitabApp/livre/list"><i class="icon-list-alt"></i><span class="hidden-tablet">Liste thèses</span></a></li>
-				<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox" checked> Pour plus de rapidité</label>		
+						<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox" checked style="display : none;"></label>		
 
 					</ul>
 					

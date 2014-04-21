@@ -40,6 +40,7 @@ class ReservationController {
 		listLivresAuPanier.clear();
 		session.setAttribute("panier", listLivresAuPanier)
 		session.setAttribute("nombre", 0)
+		session.setAttribute("titres", new ArrayList<String>())
 		
 		flash.message = message(code: 'reservation reussie')
 		

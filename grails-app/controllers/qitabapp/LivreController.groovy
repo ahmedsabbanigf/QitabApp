@@ -7,9 +7,9 @@ class LivreController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	static ArrayList<Integer> listPanier = new ArrayList<Integer>()
+	static ArrayList<String> listPanierTitre = new ArrayList<String>()
 	
     def index() {
-		println "entree index"
 		HttpSession session=request.getSession();
 		session["nombre"] = 0
         redirect(action: "list", params: params)
@@ -188,8 +188,10 @@ class LivreController {
 			}
 			
 			listPanier.add(livreInstance.id)
+			listPanierTitre.add(livreInstance.titre)
 			session["panier"] = listPanier
 			session["nombre"] = listPanier.size()
+			session["titres"] =  listPanierTitre
 			
 			flash.message = message(code: 'Livre ajoute au panier avec succes', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
 			//redirect(action: "list")
@@ -204,6 +206,8 @@ class LivreController {
 	
 	def supprimerLivreDuPanier(Long id){
 		ArrayList<Integer> listLivresAjouteAuPanier = session.getAttribute("panier")
+		ArrayList<String> listTitresLivres = session.getAttribute("titres")
+		
 		//listPanier.addt(livreInstance.id)
 		def livreInstanceList = Livre.get(id)
 		livreInstanceList.each {
@@ -211,10 +215,15 @@ class LivreController {
 			it.save(flush:true)
 		}
 		
-		listLivresAjouteAuPanier.remove(id)
-		session.setAttribute("panier", listLivresAjouteAuPanier)
-		redirect(action: "showpanier")
+		listLivresAjouteAuPanier.remove((Integer)id)
+		listPanier.remove((Integer)id)
+		listTitresLivres.remove(livreInstanceList.titre)
+		listPanierTitre.remove(livreInstanceList.titre)
 		
+		session.setAttribute("panier", listLivresAjouteAuPanier)
+		session.setAttribute("nombre", session.getAttribute("nombre") - 1)
+		session.setAttribute("titres", listTitresLivres)
+		redirect(action: "showpanier")
 	}
 	
 	def viderpanier() {
@@ -228,6 +237,7 @@ class LivreController {
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
 		session.setAttribute("nombre", 0)
+		session.setAttribute("titres", listLivresAjouteAuPanier)
 		
 		flash.message = message(code: 'Le panier est desormais vide', args: [message(code: 'livre.label', default: 'Livre')])
 		redirect(uri: request.getHeader('referer') )	
