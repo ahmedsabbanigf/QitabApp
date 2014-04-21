@@ -58,12 +58,7 @@ class LivreController {
 	
 	def rechercheParAuteur(){
 	println params
-//		def resultPrenom = c.list {
-//				auteurs{
-//					like("prenom" , "%"+params.titre+"%")
-//						}
-//			}
-//		
+
 	def c = Livre.createCriteria()
 		def result = c.list {
 			auteurs {
@@ -80,8 +75,9 @@ class LivreController {
 //	println query
 //	def result = Livre.executeQuery(query)
 		
-		println  "le resultat "+result
+
 		[livreList: result, livreCount:result.size()]
+	//	redirect(uri: request.getHeader('referer') )
 	}
 	
 	def rechercheParTitre(){
@@ -184,7 +180,8 @@ class LivreController {
 		def livreInstance = Livre.get(id)
 		if (!livreInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'livre.label', default: 'Livre'), id])
-			redirect(action: "list")
+			//redirect(action: "list")
+			redirect(uri: request.getHeader('referer') )
 			return
 		}
 		
@@ -192,7 +189,8 @@ class LivreController {
 		if(livreInstance.nbrDisponibles >= 1){
 			livreInstance.nbrDisponibles = livreInstance.nbrDisponibles-1 
 			if (!livreInstance.save(flush: true)) {
-				render(view: "list", model: [livreInstance: livreInstance])
+				//render(view: "list", model: [livreInstance: livreInstance])
+				redirect(uri: request.getHeader('referer') )
 				return
 			}
 			
@@ -202,10 +200,12 @@ class LivreController {
 			
 			
 			flash.message = message(code: 'Livre ajoute au panier avec succes', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
-			redirect(action: "list")
+			//redirect(action: "list")
+			redirect(uri: request.getHeader('referer') )
 		}else {
 		flash.message = message(code: 'Le livre est indisponible', args: [message(code: 'livre.label', default: 'Livre'), id])
-		redirect(action: "list")
+		//redirect(action: "list")
+		redirect(uri: request.getHeader('referer') )
 		}
 
 	}

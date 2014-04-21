@@ -85,19 +85,24 @@
  						 </g:each>
 						</td>
 						<td>${fieldValue(bean: livreInstance, field: "type")}</td>
-					
+						
+					<g:if test="${listPanier.contains(livreInstance.id)  } ">
 								<td class="center ">
-									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}">
+									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}" id ="disabledInput">
 										<i class="icon-zoom-in icon-white"></i>  
-										Valider                                            
+										disablereserver                                           
 									</a>
 								</td>
+								</g:if>
+								<g:else>
 								<td class="center ">
-									<a class="btn btn-success" href="/QitabApp/livre/supprimerLivreDuPanier/${livreInstance.id}">
+									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}" id ="disabledInput">
 										<i class="icon-zoom-in icon-white"></i>  
-										supprimer                                            
+										reserver                                           
 									</a>
 								</td>
+								
+								</g:else>
 							</tr>
 				</g:each>
 			</tbody>
