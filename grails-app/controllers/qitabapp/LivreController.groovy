@@ -57,17 +57,31 @@ class LivreController {
 	}
 	
 	def rechercheParAuteur(){
+	println params
+//		def resultPrenom = c.list {
+//				auteurs{
+//					like("prenom" , "%"+params.titre+"%")
+//						}
+//			}
+//		
 	def c = Livre.createCriteria()
 		def result = c.list {
-
-				auteurs{
-					like("prenom" , "%"+params.titre+"%")
-					
-						}
+			auteurs {
+				or {
+					ilike("prenom" , "%"+params.titre+"%")
+					ilike("nom" , "%"+params.titre+"%")
+				}
 			}
-			
-		println  result
-		[livreList: result]
+		}
+		
+		
+		
+//	String query = "SELECT livre.id FROM Livre AS livre,Auteur AS auteur WHERE livre.id = auteur.id AND (auteur.nom = '"+params.titre+"' OR auteur.prenom ='"+ params.titre+"')"
+//	println query
+//	def result = Livre.executeQuery(query)
+		
+		println  "le resultat "+result
+		[livreList: result, livreCount:result.size()]
 	}
 	
 	def rechercheParTitre(){
@@ -222,7 +236,7 @@ class LivreController {
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
 		
-		flash.message = message(code: 'Le panier est désormais vide', args: [message(code: 'livre.label', default: 'Livre')])
+		flash.message = message(code: 'Le panier est dï¿½sormais vide', args: [message(code: 'livre.label', default: 'Livre')])
 		redirect(uri: request.getHeader('referer') )	
 		}
 }

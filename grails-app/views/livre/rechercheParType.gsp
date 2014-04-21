@@ -8,20 +8,7 @@
 	</head>
 
 <body>
-<g:form action="rechercheLivre" >
-				
-		<fieldset>
-	 		
-	 		<g:field type="text" name="titre" />
-	 		par titre	 		
-	 		<g:radio name="myGroup" value="1"/>
-	 		par auteur
-			<g:radio name="myGroup" value="2" checked="true"/>
-			par type
-			<g:radio name="myGroup" value="3" />
-			<g:submitButton name="rechercheLivre" value="search" />
-		</fieldset>
-</g:form>
+
 <!-- 
 <g:each in="${livreList}"
                 status="i"
