@@ -2,48 +2,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="layout" content="main">
+	<style type="text/css">
+		h1	{
+		color: #4b4b4b;
+		font-family: Tahoma;
+		font-size: 22px;
+		line-height: 24px;
+		font-weight: normal;
+		}
+		label {
+		padding: 2px;
+		line-height: 20px;
+		color:#666;
+        font-weight: bold;
+        font-family: verdana, Arial, Helvetica, sans-serif;
+        padding-left: 4px;
+        vertical-align: top;
+        width: 10em;
+		}
+		h3	{
+		color: #393939;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 18px;
+		margin-bottom: 10px;
+		}
+	</style>
 </head>
 <body>
-<g:form action="rechercheLivre" >
-				
-		<fieldset>
-	 		
-	 		<g:field type="text" name="titre" />
-	 		par titre	 		
-	 		<g:radio name="myGroup" value="1"/>
-	 		par auteur
-			<g:radio name="myGroup" value="2" checked="true"/>
-			par type
-			<g:radio name="myGroup" value="3" />
-			<g:submitButton name="rechercheLivre" value="search" />
-		</fieldset>
-</g:form>
-
-<g:each in="${livreList}"
-                status="i"
-                var="livreInstance">
-<table>
-  <tr>
-  <td>titre </td> 
-  <td>${livreInstance?.titre}</td>
-  </tr>
-  <tr>
-   <g:each in="${livreInstance.auteurs}" status="j" var="acteurInstance">
-  <td>Auteur </td> 
- <td> ${acteurInstance?.nom + " " + acteurInstance?.prenom} </td>
- </g:each>
-  </tr>
-  <tr>
-  <td>type document </td>
- <td> ${livreInstance?.type}</td>
-  </tr>
-   </table>
-</g:each> 
+ <g:if test = "${reservation.code}">
+ 
 <h1>Infos Reservation</h1>
- <p>${reservation.id}</p>
- <p>${reservation.code}</p>
- <p>${reservation.dateReservation}</p>
- <p>${reservation.livres}</p>
+ <label> Code : </label><h3 style="color:red;">${reservation.code}</h3>
+ <label> Date limite de retrait : </label><h3 style="color:red;">${reservation.dateReservation}</h3>
+ <label> Rappel de votre reservation : </label>
+ <g:each in="${reservation.livres}" var="livreInstance">
+ <p>${livreInstance}</p>
+ </g:each>
+ 
+ </g:if>
+ <g:else>
+ 		<h1>Vous avez déjà validé votre panier</h1>
+ </g:else>
 </body>
 </html>

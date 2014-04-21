@@ -33,8 +33,6 @@
 	
 	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	
-
-	
 	<link rel="shortcut icon" href="${resource(dir: 'cms/img', file: 'favicon.ico')}">
 		
 </head>
@@ -55,7 +53,7 @@
 				
 				<div class="btn-group pull-right" >
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-user"></i><span class="hidden-phone">Mon Panier</span>
+						<i class="icon-shopping-cart"></i><span class="hidden-phone">Mon Panier(${session.nombre})</span>
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">

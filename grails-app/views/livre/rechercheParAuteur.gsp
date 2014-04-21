@@ -91,15 +91,10 @@
 								<td class="center ">
 									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}">
 										<i class="icon-zoom-in icon-white"></i>  
-										Valider                                            
+										reserver                                           
 									</a>
 								</td>
-								<td class="center ">
-									<a class="btn btn-success" href="/QitabApp/livre/supprimerLivreDuPanier/${livreInstance.id}">
-										<i class="icon-zoom-in icon-white"></i>  
-										supprimer                                            
-									</a>
-								</td>
+								
 							</tr>
 				</g:each>
 			</tbody>

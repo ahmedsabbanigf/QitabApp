@@ -11,6 +11,7 @@ class LivreController {
     def index() {
 		println "entree index"
 		HttpSession session=request.getSession();
+		session["nombre"] = 0
         redirect(action: "list", params: params)
     }
 
@@ -58,12 +59,6 @@ class LivreController {
 	
 	def rechercheParAuteur(){
 	println params
-//		def resultPrenom = c.list {
-//				auteurs{
-//					like("prenom" , "%"+params.titre+"%")
-//						}
-//			}
-//		
 	def c = Livre.createCriteria()
 		def result = c.list {
 			auteurs {
@@ -74,14 +69,8 @@ class LivreController {
 			}
 		}
 		
-		
-		
-//	String query = "SELECT livre.id FROM Livre AS livre,Auteur AS auteur WHERE livre.id = auteur.id AND (auteur.nom = '"+params.titre+"' OR auteur.prenom ='"+ params.titre+"')"
-//	println query
-//	def result = Livre.executeQuery(query)
-		
-		println  "le resultat "+result
 		[livreList: result, livreCount:result.size()]
+	//	redirect(uri: request.getHeader('referer') )
 	}
 	
 	def rechercheParTitre(){
@@ -184,28 +173,31 @@ class LivreController {
 		def livreInstance = Livre.get(id)
 		if (!livreInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'livre.label', default: 'Livre'), id])
-			redirect(action: "list")
+			//redirect(action: "list")
+			redirect(uri: request.getHeader('referer') )
 			return
 		}
 		
-		
-		if(livreInstance.nbrDisponibles >= 1){
+		println " listPanier "+ listPanier
+		if(livreInstance.nbrDisponibles >= 1 && !listPanier.contains(id)){
 			livreInstance.nbrDisponibles = livreInstance.nbrDisponibles-1 
 			if (!livreInstance.save(flush: true)) {
-				render(view: "list", model: [livreInstance: livreInstance])
+				//render(view: "list", model: [livreInstance: livreInstance])
+				redirect(uri: request.getHeader('referer') )
 				return
 			}
 			
 			listPanier.add(livreInstance.id)
 			session["panier"] = listPanier
-			println session.panier
-			
+			session["nombre"] = listPanier.size()
 			
 			flash.message = message(code: 'Livre ajoute au panier avec succes', args: [message(code: 'livre.label', default: 'Livre'), livreInstance.id])
-			redirect(action: "list")
+			//redirect(action: "list")
+			redirect(uri: request.getHeader('referer') )
 		}else {
 		flash.message = message(code: 'Le livre est indisponible', args: [message(code: 'livre.label', default: 'Livre'), id])
-		redirect(action: "list")
+		//redirect(action: "list")
+		redirect(uri: request.getHeader('referer') )
 		}
 
 	}
@@ -235,8 +227,9 @@ class LivreController {
 		       }
 		listLivresAjouteAuPanier.clear();
 		session.setAttribute("panier", listLivresAjouteAuPanier)
+		session.setAttribute("nombre", 0)
 		
-		flash.message = message(code: 'Le panier est d�sormais vide', args: [message(code: 'livre.label', default: 'Livre')])
+		flash.message = message(code: 'Le panier est desormais vide', args: [message(code: 'livre.label', default: 'Livre')])
 		redirect(uri: request.getHeader('referer') )	
 		}
 }

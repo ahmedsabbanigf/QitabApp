@@ -58,7 +58,7 @@
 					
 								<td class="center ">
 									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}">
-										<i class="icon-zoom-in icon-white"></i>  
+										<i class="icon-book icon-white"></i>  
 										Résérver                                            
 									</a>
 								</td>
