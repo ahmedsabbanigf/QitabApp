@@ -58,7 +58,6 @@ class LivreController {
 	}
 	
 	def rechercheParAuteur(){
-	println params
 	def c = Livre.createCriteria()
 		def result = c.list {
 			auteurs {
@@ -70,7 +69,6 @@ class LivreController {
 		}
 		
 		[livreList: result, livreCount:result.size()]
-	//	redirect(uri: request.getHeader('referer') )
 	}
 	
 	def rechercheParTitre(){

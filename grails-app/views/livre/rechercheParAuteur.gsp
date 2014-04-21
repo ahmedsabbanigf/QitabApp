@@ -28,12 +28,12 @@
    </table>
 </g:each>  
 
-<div class="pagination">
-<g:paginate next="Forward" prev="Back"
-              max="2"
-             total="${livreCount}" />
-            </div>
-            </div>
+	<div class="pagination">
+		<g:paginate next="Forward" prev="Back"
+		              max="2"
+		             total="${livreCount}" />
+	</div>
+</div>
 
 <a href="#list-livre" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
