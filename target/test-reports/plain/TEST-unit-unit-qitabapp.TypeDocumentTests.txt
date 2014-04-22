@@ -1,15 +1,14 @@
 Testsuite: qitabapp.TypeDocumentTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0,061 sec
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0,007 sec
 ------------- Standard Output ---------------
---Output from testSomething--
+--Output from initializationError--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
---Output from testSomething--
+--Output from initializationError--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0,059 sec
-	FAILED
-junit.framework.AssertionFailedError: Implement me
-junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.TypeDocumentTests.testSomething(TypeDocumentTests.groovy:15)
+Testcase: initializationError took 0,006 sec
+	Caused an ERROR
+No runnable methods
+java.lang.Exception: No runnable methods
 

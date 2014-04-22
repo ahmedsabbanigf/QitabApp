@@ -206,7 +206,7 @@
 	<script src="/QitabApp/static/cms/js/charisma.js"></script>
 </body>
 <footer>
-		<p class="pull-left">&copy; <a href="#" target="_blank">Projet JEE</a> UPS</p>
+		<p class="pull-left"><a href="#" target="_blank">Projet JEE</a> UPS</p>
 		<p class="pull-right">Programmé par : <a href="#">Oussama LAKLALECH & Ahmed SABBANI</a></p><br/>
 </footer>
 </html>

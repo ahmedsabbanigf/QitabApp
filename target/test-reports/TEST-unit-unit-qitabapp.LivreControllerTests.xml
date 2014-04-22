@@ -1,63 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="3" hostname="sabbani-Satellite-C660" name="qitabapp.LivreControllerTests" tests="8" time="7.024" timestamp="2014-04-21T22:43:08">
+<testsuite errors="0" failures="3" hostname="Ouss-PC" name="qitabapp.LivreControllerTests" tests="8" time="2.069" timestamp="2014-04-22T20:51:21">
   <properties />
-  <testcase classname="qitabapp.LivreControllerTests" name="testIndex" time="3.634" />
-  <testcase classname="qitabapp.LivreControllerTests" name="testList" time="1.158" />
-  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheLivre" time="0.291">
-    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &quot;/livre/rechercheParAuteur&quot;&#xa;       |        |             |&#xa;       |        |             false&#xa;       |        /livre/rechercheParType&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1091c6b&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.LivreControllerTests" name="testShow" time="0.98">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@15a7b12 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       qitabapp.Livre@15a7b12 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:95)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testIndex" time="0.152" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testSave" time="0.207">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@b02b1d&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/livre/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@b02b1d
+
+	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:81)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.LivreControllerTests" name="testList" time="0.141" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheLivre" time="0.137">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &quot;/livre/rechercheParAuteur&quot;&#xa;       |        |             |&#xa;       |        |             false&#xa;       |        /livre/rechercheParType&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12165de&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &quot;/livre/rechercheParAuteur&quot;
        |        |             |
        |        |             false
        |        /livre/rechercheParType
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1091c6b
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12165de
 
 	at qitabapp.LivreControllerTests.testRechercheLivre(LivreControllerTests.groovy:37)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParTitre" time="0.296" />
-  <testcase classname="qitabapp.LivreControllerTests" name="testSave" time="0.431">
-    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@38a39d&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert response.redirectedUrl == &apos;/livre/show/1&apos;
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@38a39d
-
-	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:81)
-</failure>
-  </testcase>
-  <testcase classname="qitabapp.LivreControllerTests" name="testShow" time="0.799">
-    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       qitabapp.Livre@170aad8 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert livre.save() != null
-       |     |      |
-       |     null   false
-       qitabapp.Livre@170aad8 (toString() == null)
-
-	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:95)
-</failure>
-  </testcase>
-  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParType" time="0.172" />
-  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParAuteur" time="0.141" />
-  <system-out><![CDATA[--Output from testIndex--
+  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParTitre" time="0.15" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParType" time="0.129" />
+  <testcase classname="qitabapp.LivreControllerTests" name="testRechercheParAuteur" time="0.134" />
+  <system-out><![CDATA[--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
 --Output from testList--
 --Output from testRechercheLivre--
-[:]
-null
 --Output from testRechercheParTitre--
 []
---Output from testSave--
---Output from testShow--
 --Output from testRechercheParType--
 --Output from testRechercheParAuteur--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testIndex--
+  <system-err><![CDATA[--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
 --Output from testList--
 --Output from testRechercheLivre--
 --Output from testRechercheParTitre--
---Output from testSave--
---Output from testShow--
 --Output from testRechercheParType--
 --Output from testRechercheParAuteur--
 ]]></system-err>

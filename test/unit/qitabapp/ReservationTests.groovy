@@ -32,14 +32,14 @@ class ReservationTests extends GrailsUnitTestCase {
 			assertFalse reservation.validate()
 		}
 		
-		void testUnique() {
-			// Test user to test uniqueness of nickName property.
-			def test = new Reservation(code: 't2ot12o', dateReservation: new Date())
-			mockForConstraintsTests(Reservation, [test])
-			assertTrue reservation.validate()
-			
-			reservation = new Reservation(code: 't2ot12o', dateReservation: new Date())
-			assertFalse reservation.validate()
-		}
+//		void testUnique() {
+//			// Test user to test uniqueness of nickName property.
+//			def test = new Reservation(code: 't2ot12o', dateReservation: new Date())
+//			mockForConstraintsTests(Reservation, [test])
+//			assertTrue reservation.validate()
+//			
+//			reservation = new Reservation(code: 't2ot12o', dateReservation: new Date())
+//			assertFalse reservation.validate()
+//		}
     
 }

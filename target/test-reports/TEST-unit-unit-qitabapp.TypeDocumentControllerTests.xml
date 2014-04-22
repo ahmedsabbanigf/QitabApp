@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" name="qitabapp.TypeDocumentControllerTests" tests="8" time="0.968" timestamp="2014-04-15T09:46:37">
+<testsuite errors="0" failures="5" hostname="Ouss-PC" name="qitabapp.TypeDocumentControllerTests" tests="8" time="2.152" timestamp="2014-04-22T20:51:26">
   <properties />
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testEdit" time="0.34">
-    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@19bf6df (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testShow" time="0.97">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@1e3d80c (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert typeDocument.save() != null
        |            |      |
        |            null   false
-       qitabapp.TypeDocument@19bf6df (toString() == null)
-
-	at qitabapp.TypeDocumentControllerTests.testEdit(TypeDocumentControllerTests.groovy:80)
-</failure>
-  </testcase>
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testShow" time="0.097">
-    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@1f7e042 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert typeDocument.save() != null
-       |            |      |
-       |            null   false
-       qitabapp.TypeDocument@1f7e042 (toString() == null)
+       qitabapp.TypeDocument@1e3d80c (toString() == null)
 
 	at qitabapp.TypeDocumentControllerTests.testShow(TypeDocumentControllerTests.groovy:62)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testList" time="0.091" />
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testSave" time="0.075">
-    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testIndex" time="0.141" />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testSave" time="0.161">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1fbe6e4&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/typeDocument/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@21f4b4
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1fbe6e4
 
 	at qitabapp.TypeDocumentControllerTests.testSave(TypeDocumentControllerTests.groovy:48)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testDelete" time="0.069">
-    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@ffc9ca (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testDelete" time="0.17">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@11c67b1 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert typeDocument.save() != null
        |            |      |
        |            null   false
-       qitabapp.TypeDocument@ffc9ca (toString() == null)
+       qitabapp.TypeDocument@11c67b1 (toString() == null)
 
 	at qitabapp.TypeDocumentControllerTests.testDelete(TypeDocumentControllerTests.groovy:144)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testIndex" time="0.051" />
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testUpdate" time="0.067">
-    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@b07515 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testUpdate" time="0.15">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@42769e (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert typeDocument.save() != null
        |            |      |
        |            null   false
-       qitabapp.TypeDocument@b07515 (toString() == null)
+       qitabapp.TypeDocument@42769e (toString() == null)
 
 	at qitabapp.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:100)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testCreate" time="0.08" />
-  <system-out><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testList" time="0.156" />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testCreate" time="0.215" />
+  <testcase classname="qitabapp.TypeDocumentControllerTests" name="testEdit" time="0.152">
+    <failure message="Assertion failed: &#xa;&#xa;assert typeDocument.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       qitabapp.TypeDocument@1d80077 (toString() == null)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert typeDocument.save() != null
+       |            |      |
+       |            null   false
+       qitabapp.TypeDocument@1d80077 (toString() == null)
+
+	at qitabapp.TypeDocumentControllerTests.testEdit(TypeDocumentControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testShow--
+--Output from testIndex--
 --Output from testSave--
 --Output from testDelete--
---Output from testIndex--
 --Output from testUpdate--
+--Output from testList--
 --Output from testCreate--
+--Output from testEdit--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testEdit--
---Output from testShow--
---Output from testList--
+  <system-err><![CDATA[--Output from testShow--
+--Output from testIndex--
 --Output from testSave--
 --Output from testDelete--
---Output from testIndex--
 --Output from testUpdate--
+--Output from testList--
 --Output from testCreate--
+--Output from testEdit--
 ]]></system-err>
 </testsuite>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" name="qitabapp.ReservationTests" tests="1" time="0.186" timestamp="2014-04-15T09:46:37">
+<testsuite errors="0" failures="0" hostname="Ouss-PC" name="qitabapp.ReservationTests" tests="1" time="0.613" timestamp="2014-04-22T20:51:25">
   <properties />
-  <testcase classname="qitabapp.ReservationTests" name="testSomething" time="0.056">
-    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at qitabapp.ReservationTests.testSomething(ReservationTests.groovy:15)
-</failure>
-  </testcase>
-  <system-out><![CDATA[--Output from testSomething--
+  <testcase classname="qitabapp.ReservationTests" name="testBlank" time="0.131" />
+  <system-out><![CDATA[--Output from testBlank--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
+  <system-err><![CDATA[--Output from testBlank--
 ]]></system-err>
 </testsuite>

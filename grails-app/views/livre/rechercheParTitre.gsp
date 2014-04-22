@@ -2,15 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'livre.label', default: 'Livre')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
-
+<meta name="layout" content="main">
+</head>
 <body>
 
-
-<!--  
+<%--<div>
 <g:each in="${livreList}"
                 status="i"
                 var="livreInstance">
@@ -20,28 +16,26 @@
   <td>${livreInstance?.titre}</td>
   </tr>
   <tr>
-  <g:each in="${livreInstance.auteurs}" status="j" var="acteurInstance">
+   <g:each in="${livreInstance.auteurs}" status="j" var="acteurInstance">
   <td>Auteur </td> 
  <td> ${acteurInstance?.nom + " " + acteurInstance?.prenom} </td>
  </g:each>
   </tr>
   <tr>
-  <td>type Document </td>
+  <td>type document </td>
  <td> ${livreInstance?.type}</td>
   </tr>
    </table>
-</g:each> -->
+</g:each>
+--%><%--  
+Partie de la pagination 
+	<div class="pagination">
+		<g:paginate next="Forward" prev="Back"
+		             total="${livreCount}" />
+	</div>
+</div>--%>
 
-
-		<a href="#list-livre" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
 		<div id="list-livre" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -50,7 +44,7 @@
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header well" data-original-title="">
-						<h2><i class="icon-user"></i> Resultat Recherche Par Titre</h2>
+						<h2><i class="icon-user"></i> Resultat de la Recherche</h2>
 						<div class="box-icon">
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
 							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
@@ -85,14 +79,13 @@
  						 </g:each>
 						</td>
 						<td>${fieldValue(bean: livreInstance, field: "type")}</td>
-						
+					
 								<td class="center ">
 									<a class="btn btn-success" href="/QitabApp/livre/ajoutpanier/${livreInstance.id}">
 										<i class="icon-zoom-in icon-white"></i>  
-										reserverdisable                                         
+										reserver                                           
 									</a>
 								</td>
-								
 								
 							</tr>
 				</g:each>
@@ -102,7 +95,6 @@
 	</div>
 	</div>
 	</div>
+
 </body>
-
-
 </html>
