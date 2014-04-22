@@ -1,46 +1,77 @@
 Testsuite: qitabapp.LivreControllerTests
+<<<<<<< HEAD
 Tests run: 8, Failures: 3, Errors: 0, Time elapsed: 1,107 sec
+=======
+Tests run: 8, Failures: 3, Errors: 0, Time elapsed: 2,069 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 ------------- Standard Output ---------------
+--Output from testShow--
 --Output from testIndex--
+<<<<<<< HEAD
 --Output from testShow--
 --Output from testRechercheParTitre--
 []
+=======
+--Output from testSave--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 --Output from testList--
 --Output from testSave--
 --Output from testRechercheLivre--
+<<<<<<< HEAD
 [:]
 null
+=======
+--Output from testRechercheParTitre--
+[]
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 --Output from testRechercheParType--
 --Output from testRechercheParAuteur--
 les params [:]
 params offset null
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
+--Output from testShow--
 --Output from testIndex--
+<<<<<<< HEAD
 --Output from testShow--
 --Output from testRechercheParTitre--
 --Output from testList--
 --Output from testSave--
 --Output from testRechercheLivre--
+=======
+--Output from testSave--
+--Output from testList--
+--Output from testRechercheLivre--
+--Output from testRechercheParTitre--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 --Output from testRechercheParType--
 --Output from testRechercheParAuteur--
 ------------- ---------------- ---------------
 
+<<<<<<< HEAD
 Testcase: testIndex took 0,322 sec
 Testcase: testShow took 0,106 sec
+=======
+Testcase: testShow took 0,98 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
 assert livre.save() != null
        |     |      |
        |     null   false
+<<<<<<< HEAD
        qitabapp.Livre@7bf32b (toString() == null)
+=======
+       qitabapp.Livre@15a7b12 (toString() == null)
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
        |     |      |
        |     null   false
+<<<<<<< HEAD
        qitabapp.Livre@7bf32b (toString() == null)
 
 	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:95)
@@ -48,24 +79,45 @@ assert livre.save() != null
 Testcase: testRechercheParTitre took 0,093 sec
 Testcase: testList took 0,091 sec
 Testcase: testSave took 0,108 sec
+=======
+       qitabapp.Livre@15a7b12 (toString() == null)
+
+	at qitabapp.LivreControllerTests.testShow(LivreControllerTests.groovy:95)
+
+Testcase: testIndex took 0,152 sec
+Testcase: testSave took 0,207 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/livre/show/1'
        |        |             |
        |        null          false
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7eaf04
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@b02b1d
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/livre/show/1'
        |        |             |
        |        null          false
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7eaf04
 
 	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:81)
 
 Testcase: testRechercheLivre took 0,088 sec
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@b02b1d
+
+	at qitabapp.LivreControllerTests.testSave(LivreControllerTests.groovy:81)
+
+Testcase: testList took 0,141 sec
+Testcase: testRechercheLivre took 0,137 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
@@ -73,7 +125,11 @@ assert response.redirectedUrl == "/livre/rechercheParAuteur"
        |        |             |
        |        |             false
        |        /livre/rechercheParType
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19d9f69
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12165de
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
@@ -81,9 +137,19 @@ assert response.redirectedUrl == "/livre/rechercheParAuteur"
        |        |             |
        |        |             false
        |        /livre/rechercheParType
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19d9f69
 
 	at qitabapp.LivreControllerTests.testRechercheLivre(LivreControllerTests.groovy:37)
 
 Testcase: testRechercheParType took 0,086 sec
 Testcase: testRechercheParAuteur took 0,063 sec
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12165de
+
+	at qitabapp.LivreControllerTests.testRechercheLivre(LivreControllerTests.groovy:37)
+
+Testcase: testRechercheParTitre took 0,15 sec
+Testcase: testRechercheParType took 0,13 sec
+Testcase: testRechercheParAuteur took 0,134 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825

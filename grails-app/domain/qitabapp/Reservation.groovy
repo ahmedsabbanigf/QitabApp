@@ -13,5 +13,7 @@ class Reservation {
 		}
 	
 	static constraints = {
+		code(blank:false)
+		dateReservation (blank:false)
     }
 }

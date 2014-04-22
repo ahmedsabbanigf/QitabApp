@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" name="qitabapp.ReservationControllerTests" tests="8" time="0.858" timestamp="2014-04-22T19:34:16">
   <properties />
   <testcase classname="qitabapp.ReservationControllerTests" name="testIndex" time="0.283" />
   <testcase classname="qitabapp.ReservationControllerTests" name="testShow" time="0.084">
+=======
+<testsuite errors="0" failures="2" hostname="Ouss-PC" name="qitabapp.ReservationControllerTests" tests="4" time="1.61" timestamp="2014-04-22T20:51:24">
+  <properties />
+  <testcase classname="qitabapp.ReservationControllerTests" name="testShow" time="0.945">
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
     <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       qitabapp.Reservation : (unsaved)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert reservation.save() != null
@@ -10,6 +16,7 @@ assert reservation.save() != null
        |           null   false
        qitabapp.Reservation : (unsaved)
 
+<<<<<<< HEAD
 	at qitabapp.ReservationControllerTests.testShow(ReservationControllerTests.groovy:62)
 </failure>
   </testcase>
@@ -76,5 +83,32 @@ assert response.redirectedUrl == &apos;/reservation/show/1&apos;
 --Output from testList--
 --Output from testCreate--
 --Output from testSave--
+=======
+	at qitabapp.ReservationControllerTests.testShow(ReservationControllerTests.groovy:56)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.ReservationControllerTests" name="testIndex" time="0.155" />
+  <testcase classname="qitabapp.ReservationControllerTests" name="testSave" time="0.218">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/reservation/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1514164&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/reservation/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1514164
+
+	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:42)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.ReservationControllerTests" name="testList" time="0.274" />
+  <system-out><![CDATA[--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+]]></system-out>
+  <system-err><![CDATA[--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 ]]></system-err>
 </testsuite>

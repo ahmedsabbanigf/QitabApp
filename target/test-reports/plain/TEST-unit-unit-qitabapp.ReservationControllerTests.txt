@@ -1,4 +1,5 @@
 Testsuite: qitabapp.ReservationControllerTests
+<<<<<<< HEAD
 Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0,858 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
@@ -77,6 +78,23 @@ assert reservation.save() != null
 	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:100)
 
 Testcase: testDelete took 0,062 sec
+=======
+Tests run: 4, Failures: 2, Errors: 0, Time elapsed: 1,61 sec
+------------- Standard Output ---------------
+--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+------------- ---------------- ---------------
+
+Testcase: testShow took 0,945 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
@@ -92,25 +110,44 @@ assert reservation.save() != null
        |           null   false
        qitabapp.Reservation : (unsaved)
 
+<<<<<<< HEAD
 	at qitabapp.ReservationControllerTests.testDelete(ReservationControllerTests.groovy:144)
 
 Testcase: testList took 0,059 sec
 Testcase: testCreate took 0,063 sec
 Testcase: testSave took 0,062 sec
+=======
+	at qitabapp.ReservationControllerTests.testShow(ReservationControllerTests.groovy:56)
+
+Testcase: testIndex took 0,155 sec
+Testcase: testSave took 0,218 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/reservation/show/1'
        |        |             |
        |        null          false
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1514164
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/reservation/show/1'
        |        |             |
        |        null          false
+<<<<<<< HEAD
        org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26
 
 	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:48)
 
+=======
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1514164
+
+	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:42)
+
+Testcase: testList took 0,274 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825

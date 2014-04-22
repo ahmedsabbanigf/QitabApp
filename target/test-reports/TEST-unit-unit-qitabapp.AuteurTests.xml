@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" name="qitabapp.AuteurTests" tests="1" time="0.141" timestamp="2014-04-22T19:34:18">
   <properties />
   <testcase classname="qitabapp.AuteurTests" name="testSomething" time="0.062">
@@ -7,7 +8,13 @@
 </failure>
   </testcase>
   <system-out><![CDATA[--Output from testSomething--
+=======
+<testsuite errors="0" failures="0" hostname="Ouss-PC" name="qitabapp.AuteurTests" tests="1" time="0.596" timestamp="2014-04-22T20:51:20">
+  <properties />
+  <testcase classname="qitabapp.AuteurTests" name="testBlank" time="0.045" />
+  <system-out><![CDATA[--Output from testBlank--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 ]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
+  <system-err><![CDATA[--Output from testBlank--
 ]]></system-err>
 </testsuite>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --Output from testIndex--
 --Output from testShow--
 --Output from testEdit--
@@ -6,3 +7,13 @@
 --Output from testList--
 --Output from testCreate--
 --Output from testSave--
+=======
+--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testDelete--
+--Output from testUpdate--
+--Output from testList--
+--Output from testCreate--
+--Output from testEdit--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825

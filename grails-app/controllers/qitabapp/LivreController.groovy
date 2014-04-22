@@ -28,9 +28,6 @@ class LivreController {
 	}
 
 	def rechercheLivre(){
-		println params
-		println params.myGroup
-		
 		if(params.myGroup.equals("2")){
 			redirect(action: "rechercheParAuteur", params: params)
 		}
@@ -48,7 +45,6 @@ class LivreController {
 		
 		def c = Livre.createCriteria()
 		def results = c.list {
-
 				type{
 					like("intitule" , "%"+params.titre+"%")
 				}

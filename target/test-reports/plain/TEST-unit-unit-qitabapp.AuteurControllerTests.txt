@@ -1,4 +1,5 @@
 Testsuite: qitabapp.AuteurControllerTests
+<<<<<<< HEAD
 Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1,877 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
@@ -42,19 +43,42 @@ assert auteur.save() != null
 	at qitabapp.AuteurControllerTests.testShow(AuteurControllerTests.groovy:62)
 
 Testcase: testEdit took 0,085 sec
+=======
+Tests run: 4, Failures: 2, Errors: 0, Time elapsed: 1,624 sec
+------------- Standard Output ---------------
+--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+null
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testShow--
+--Output from testIndex--
+--Output from testSave--
+--Output from testList--
+------------- ---------------- ---------------
+
+Testcase: testShow took 1,085 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 	FAILED
 Assertion failed: 
 
 assert auteur.save() != null
        |      |      |
        |      null   false
+<<<<<<< HEAD
        qitabapp.Auteur@7d6f32 (toString() == null)
+=======
+       qitabapp.Auteur@1425a69 (toString() == null)
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert auteur.save() != null
        |      |      |
        |      null   false
+<<<<<<< HEAD
        qitabapp.Auteur@7d6f32 (toString() == null)
 
 	at qitabapp.AuteurControllerTests.testEdit(AuteurControllerTests.groovy:80)
@@ -115,3 +139,29 @@ assert response.redirectedUrl == '/auteur/show/1'
 
 	at qitabapp.AuteurControllerTests.testSave(AuteurControllerTests.groovy:48)
 
+=======
+       qitabapp.Auteur@1425a69 (toString() == null)
+
+	at qitabapp.AuteurControllerTests.testShow(AuteurControllerTests.groovy:56)
+
+Testcase: testIndex took 0,173 sec
+Testcase: testSave took 0,181 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/auteur/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@18b093
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/auteur/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@18b093
+
+	at qitabapp.AuteurControllerTests.testSave(AuteurControllerTests.groovy:42)
+
+Testcase: testList took 0,149 sec
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825

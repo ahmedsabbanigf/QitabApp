@@ -1,8 +1,16 @@
+--Output from testShow--
 --Output from testIndex--
+<<<<<<< HEAD
 --Output from testShow--
 --Output from testRechercheParTitre--
 --Output from testList--
 --Output from testSave--
 --Output from testRechercheLivre--
+=======
+--Output from testSave--
+--Output from testList--
+--Output from testRechercheLivre--
+--Output from testRechercheParTitre--
+>>>>>>> b1d2f92536b0dfee1611c308198af68fa528d825
 --Output from testRechercheParType--
 --Output from testRechercheParAuteur--
