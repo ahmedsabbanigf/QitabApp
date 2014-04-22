@@ -13,6 +13,13 @@ class Livre {
 		titre
 	}
 	
+	static mapping = {
+		auteurs fetch:"join"
+		reservation fetch:"join"
+		}
+	
+		
+	
 	static constraints = {
 		titre(blank:false)
 		nombreExemplaires(blank:false)

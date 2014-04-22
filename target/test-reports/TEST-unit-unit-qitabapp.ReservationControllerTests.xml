@@ -1,48 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="2" hostname="sabbani-Satellite-C660" name="qitabapp.ReservationControllerTests" tests="8" time="1.223" timestamp="2014-04-15T09:46:36">
+<testsuite errors="0" failures="5" hostname="sabbani-Satellite-C660" name="qitabapp.ReservationControllerTests" tests="8" time="0.858" timestamp="2014-04-22T19:34:16">
   <properties />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testEdit" time="0.349" />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testShow" time="0.104" />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testList" time="0.106" />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testSave" time="0.156">
-    <failure message="Assertion failed: &#xa;&#xa;assert model.reservationInstance != null&#xa;       |     |                   |&#xa;       [:]   null                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.ReservationControllerTests" name="testIndex" time="0.283" />
+  <testcase classname="qitabapp.ReservationControllerTests" name="testShow" time="0.084">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       qitabapp.Reservation : (unsaved)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
-assert model.reservationInstance != null
-       |     |                   |
-       [:]   null                false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
-	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:40)
+	at qitabapp.ReservationControllerTests.testShow(ReservationControllerTests.groovy:62)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.ReservationControllerTests" name="testDelete" time="0.101" />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testIndex" time="0.093" />
-  <testcase classname="qitabapp.ReservationControllerTests" name="testUpdate" time="0.119">
-    <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/reservation/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="qitabapp.ReservationControllerTests" name="testEdit" time="0.065">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       qitabapp.Reservation : (unsaved)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
-assert view == &quot;/reservation/edit&quot;
-       |    |
-       null false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
-	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:108)
+	at qitabapp.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:80)
 </failure>
   </testcase>
-  <testcase classname="qitabapp.ReservationControllerTests" name="testCreate" time="0.086" />
-  <system-out><![CDATA[--Output from testEdit--
+  <testcase classname="qitabapp.ReservationControllerTests" name="testUpdate" time="0.061">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       qitabapp.Reservation : (unsaved)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.ReservationControllerTests" name="testDelete" time="0.062">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       qitabapp.Reservation : (unsaved)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+	at qitabapp.ReservationControllerTests.testDelete(ReservationControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <testcase classname="qitabapp.ReservationControllerTests" name="testList" time="0.059" />
+  <testcase classname="qitabapp.ReservationControllerTests" name="testCreate" time="0.063" />
+  <testcase classname="qitabapp.ReservationControllerTests" name="testSave" time="0.063">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/reservation/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/reservation/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26
+
+	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
 --Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
+--Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
+--Output from testList--
 --Output from testCreate--
+--Output from testSave--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testEdit--
+  <system-err><![CDATA[--Output from testIndex--
 --Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
---Output from testIndex--
+--Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
+--Output from testList--
 --Output from testCreate--
+--Output from testSave--
 ]]></system-err>
 </testsuite>

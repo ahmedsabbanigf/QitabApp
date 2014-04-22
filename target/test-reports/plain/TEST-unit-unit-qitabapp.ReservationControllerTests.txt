@@ -1,61 +1,116 @@
 Testsuite: qitabapp.ReservationControllerTests
-Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 1,223 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0,858 sec
 ------------- Standard Output ---------------
---Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
 --Output from testIndex--
+--Output from testShow--
+--Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
+--Output from testList--
 --Output from testCreate--
+--Output from testSave--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
---Output from testEdit--
---Output from testShow--
---Output from testList--
---Output from testSave--
---Output from testDelete--
 --Output from testIndex--
+--Output from testShow--
+--Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
+--Output from testList--
 --Output from testCreate--
+--Output from testSave--
 ------------- ---------------- ---------------
 
-Testcase: testEdit took 0,349 sec
-Testcase: testShow took 0,104 sec
-Testcase: testList took 0,106 sec
-Testcase: testSave took 0,155 sec
+Testcase: testIndex took 0,283 sec
+Testcase: testShow took 0,084 sec
 	FAILED
 Assertion failed: 
 
-assert model.reservationInstance != null
-       |     |                   |
-       [:]   null                false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
-assert model.reservationInstance != null
-       |     |                   |
-       [:]   null                false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
-	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:40)
+	at qitabapp.ReservationControllerTests.testShow(ReservationControllerTests.groovy:62)
 
-Testcase: testDelete took 0,101 sec
-Testcase: testIndex took 0,093 sec
-Testcase: testUpdate took 0,119 sec
+Testcase: testEdit took 0,065 sec
 	FAILED
 Assertion failed: 
 
-assert view == "/reservation/edit"
-       |    |
-       null false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
-assert view == "/reservation/edit"
-       |    |
-       null false
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
 
-	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:108)
+	at qitabapp.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:80)
 
-Testcase: testCreate took 0,086 sec
+Testcase: testUpdate took 0,061 sec
+	FAILED
+Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+	at qitabapp.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:100)
+
+Testcase: testDelete took 0,062 sec
+	FAILED
+Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       qitabapp.Reservation : (unsaved)
+
+	at qitabapp.ReservationControllerTests.testDelete(ReservationControllerTests.groovy:144)
+
+Testcase: testList took 0,059 sec
+Testcase: testCreate took 0,063 sec
+Testcase: testSave took 0,062 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/reservation/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/reservation/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1174e26
+
+	at qitabapp.ReservationControllerTests.testSave(ReservationControllerTests.groovy:48)
+

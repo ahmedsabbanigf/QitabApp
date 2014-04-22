@@ -57,9 +57,15 @@ class LivreController {
 		[livreList: results]
 	}
 	
-	def rechercheParAuteur(){
-	def c = Livre.createCriteria()
-		def result = c.list {
+	def rechercheParAuteur(Integer max){
+		
+		println "les params "+ params
+		//params.max = params.max
+		params.max = Math.min(max ?: 5, 100)
+		println "params offset "+params.offset 
+		
+		def c = Livre.createCriteria()
+		def result = c.list(offset:params.offset, max:5) {
 			auteurs {
 				or {
 					ilike("prenom" , "%"+params.titre+"%")
@@ -67,6 +73,7 @@ class LivreController {
 				}
 			}
 		}
+
 		
 		[livreList: result, livreCount:result.size()]
 	}

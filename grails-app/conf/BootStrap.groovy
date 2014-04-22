@@ -10,7 +10,7 @@ class BootStrap {
 
     def init = { servletContext ->
 		
-		String[] temp = null;
+		/*String[] temp = null;
 
 		def i = 0
 		def filePath = "resources/listTitres.csv"
@@ -24,7 +24,7 @@ class BootStrap {
 			temp = tokens[0].split(";");
 			println temp;
 			
-			//Le cas où l'auteur a un nom et un prenom
+			//Le cas oï¿½ l'auteur a un nom et un prenom
 			if(tokens.length > 1 && temp.length == 5){
 		
 				def auteur1 = new Auteur(nom:temp[4], prenom:tokens[1])
@@ -40,7 +40,7 @@ class BootStrap {
 				def livre = new Livre(titre:temp[3], nombreExemplaires:20, nbrDisponibles:10,type : type1).addToAuteurs(auteur1)
 				livre.save()
 				
-			//Le cas où l'auteur a un nom
+			//Le cas oï¿½ l'auteur a un nom
 			} else if(tokens.length == 1 && temp.length == 5){
 			def auteur1 = new Auteur(nom:temp[4], prenom:"~")
 			if(!listAuteurs.contains(auteur1)){
@@ -55,7 +55,7 @@ class BootStrap {
 			def livre = new Livre(titre:temp[3], nombreExemplaires:15, nbrDisponibles:10,type : type1).addToAuteurs(auteur1)
 			livre.save()
 			
-			//Le cas où l'auteur n'a pas de nom ni de prenom
+			//Le cas oï¿½ l'auteur n'a pas de nom ni de prenom
 			} else {
 			def auteur1 = new Auteur(nom:"~", prenom:"~")
 			if(!listAuteurs.contains(auteur1)){
@@ -72,7 +72,7 @@ class BootStrap {
 			}
 		}
 			i = i + 1
-	}
+	}*/
 		 
    }
 	

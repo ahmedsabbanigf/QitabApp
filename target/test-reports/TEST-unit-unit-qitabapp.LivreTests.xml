@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" name="qitabapp.LivreTests" tests="1" time="1.763" timestamp="2014-04-15T09:46:27">
+<testsuite errors="0" failures="1" hostname="sabbani-Satellite-C660" name="qitabapp.LivreTests" tests="1" time="0.207" timestamp="2014-04-22T19:34:13">
   <properties />
-  <testcase classname="qitabapp.LivreTests" name="testSomething" time="1.145">
+  <testcase classname="qitabapp.LivreTests" name="testSomething" time="0.078">
     <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at qitabapp.LivreTests.testSomething(LivreTests.groovy:15)
 </failure>

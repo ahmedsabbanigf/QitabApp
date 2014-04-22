@@ -11,6 +11,10 @@ class Auteur {
 		prenom
 	}
 	
+	static mapping = {
+		livres fetch:"join"
+		}
+	
 	 static constraints = {
 		 prenom(blank:false)
 		 nom(blank:false)

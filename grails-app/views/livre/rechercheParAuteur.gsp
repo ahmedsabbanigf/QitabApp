@@ -7,10 +7,11 @@
 <body>
 
 <div>
+
+<table>
 <g:each in="${livreList}"
                 status="i"
                 var="livreInstance">
-<table>
   <tr>
   <td>titre </td> 
   <td>${livreInstance?.titre}</td>
@@ -25,13 +26,12 @@
   <td>type document </td>
  <td> ${livreInstance?.type}</td>
   </tr>
+  </g:each>  
    </table>
-</g:each>  
+<p>${livreCount}</p>
 
-	<div class="pagination">
-		<g:paginate next="Forward" prev="Back"
-		              max="2"
-		             total="${livreCount}" />
+	<div class="pagination"> 
+		<g:paginate total="${livreCount}" controller="livre" action="rechercheParAuteur"  />
 	</div>
 </div>
 
